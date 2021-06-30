@@ -1,0 +1,54 @@
+<div *ngIf="loading" style="height: 300px;" class="uk-flex uk-flex-center uk-flex-middle">
+    <mat-spinner diameter="30"></mat-spinner>
+  </div>
+  
+  <button class="buttons button2" (click)="buatProduk({},-1)">Tambah Database Produk</button> 
+          
+          <div class="container">
+          <mat-card>
+              <mat-card-header>
+                <mat-card-title>Daftar Produk</mat-card-title>
+              </mat-card-header>
+  
+          <mat-card-content>
+          <mat-list>
+              <mat-list-item>
+                <img matListAvatar img src="https://img.icons8.com/plasticine/100/000000/mens-hoodie--v2.png"/>
+                <h3 matLine>Nama Produk</h3>
+                <p matLine>
+                <span>RP (harga produk)</span>          
+                </p>
+                <button mat-icon-button [matMenuTriggerFor]="menu">
+                  <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                  <button mat-menu-item (click)="isidetailProduk()">Detail</button>
+                  <button mat-menu-item >Edit</button>
+                  <button mat-menu-item (click)="deleteProduk()">Delete</button>
+                </mat-menu>
+              </mat-list-item>
+            </mat-list>
+  
+             <!--DATA KEDUA-->
+             <mat-list>
+              <mat-list-item>
+                <img matListAvatar img src="https://img.icons8.com/plasticine/100/000000/mens-hoodie--v2.png"/>
+                <h3 matLine>Nama Produk</h3>
+                <p matLine>
+                <span>RP (harga produk)</span>          
+                </p>
+                <button mat-icon-button [matMenuTriggerFor]="menu">
+                  <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                  <button mat-menu-item (click)="isidetailProduk()">Detail</button>
+                  <button mat-menu-item >Edit</button>
+                  <button mat-menu-item (click)="deleteProduk()">Delete</button>
+                </mat-menu>
+              </mat-list-item>
+            </mat-list>
+  
+           </mat-card-content>
+          </mat-card>
+          </div>
+  
